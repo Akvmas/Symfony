@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Film : {{ movie.original_title }}{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/{{ movie.poster_path }}" alt="{{ movie.original_title }}"/>
+    <br>
+    Présentation du film
+    <ul>
+        <li>Voici l'id du film choisi : {{ movie.id }}</li>
+        <li>Voici son synopsis : {{ movie.overview }}</li>
+        <li>Date de parution : {{ movie.release_date }}</li>
+        <li>VO du film : <strong>{{ movie.original_language }}</strong></li>
+        <li>Vote en moyenne : {{ movie.vote_average }}</li>
+        <li>Total de votes : {{ movie.vote_count }}</li>
+    </ul>
+</div>
+{% endblock %}

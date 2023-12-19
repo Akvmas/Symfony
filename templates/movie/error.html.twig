@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Erreur{% endblock %}
+
+{% block body %}
+<div class="error-wrapper" style="text-align: center; margin-top: 50px;">
+    <h1>Oops !</h1>
+    <p>Une erreur s'est produite : {{ message }}</p>
+    <p>
+        <a href="{{ path('app_home') }}">Retour à l'accueil</a>
+    </p>
+</div>
+{% endblock %}
